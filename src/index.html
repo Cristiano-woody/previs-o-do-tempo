@@ -20,38 +20,56 @@
 <body>
     <div id="container">
         <div id="main">
-            <div id="searchmain">
-                <div id="containerlogo">
+            <div id="searchContainer">
+                <div id="containerLogo">
                     <img id="logo" src="./img/cloudy-havyrain_icon-icons 1.png" />
                 </div>
-                <div id="containerinputsearch">
-                    <input id="inputshearch" placeholder="procure por uma Cidade..." type="text" />
+                <div id="containerInputSearch">
+                    <input id="inputShearch" placeholder="procure por uma Cidade..." type="text" />
                     <button onclick="HandleSubmit()" id="button"></button>
                 </div>
-            </div>
-            <div id="content-data">
-                <di id="localization">
-                    <img src="./img/localizationicon.png" />
-                    <span id="cityname">São Paulo - SP</span>
-                    <img src="https://countryflagsapi.com/png/bes/BR">
-                </di>
-                <div id="weater">
-                    <span id="span-date">Dom, 17 de Fev</span>
-                    <span id="span-weater">00 º C</span>
+                <div id="divError">
+                    <span id="error">Digite uma cidade válida</span>
                 </div>
-                <div>
+            </div>
+            <div id="containerWeater">
+                <di id="containerLocalization">
+                    <img id="iconLocalization" src="./img/localizationicon.png" />
+                    <span id="cityName">São Paulo - SP</span>
+                    <img id="country" src="">
+                </di>
+                <div id="containerDateweater">
+                    <span id="date">Dom, 00 de Jan</span>
+                    <span id="weater">00 º C</span>
+                </div>
+                <div id="divDescription">
                     <span id="description">nublado</span>
-                    <span id="weathericon"></span>
+                    <img id="descriptionIcon" src="https://openweathermap.org/img/wn/01d.png" />
                 </div>
                 <div id="details">
-                    <div id="containerumidity">
+                    <div id="containerHumidity">
                         <img src="./img/dropicon.png" />
-                        <span id="umidity">30%</span>
+                        <span id="humidity">00%</span>
                     </div>
                     <div>
                         <img src="./img/windicon.png">
-                        <span id="wind">2.2km/h</span>
+                        <span id="wind">0.0km/h</span>
                     </div>
+                </div>
+            </div>
+            <div id="suggestion">
+                <span>Sugentões:</span>
+                <div>
+                    <button onclick="suggestionLocales('Tóquio')">Tóquio</button>
+                    <button  onclick="suggestionLocales('Shangai')">Shangai</button>
+                </div>
+                <div>
+                    <button  onclick="suggestionLocales('cairo')">Cairo</button>
+                    <button  onclick="suggestionLocales('Orlando')">Orlando</button>
+                </div>
+                <div>
+                    <button  onclick="suggestionLocales('São paulo')"> São Paulo</button>
+                    <button  onclick="suggestionLocales('Nova Iorque')">Nova Iorque</button>
                 </div>
             </div>
         </div>
