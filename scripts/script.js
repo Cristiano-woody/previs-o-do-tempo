@@ -71,7 +71,8 @@ const HandleSubmit = (e) => {
 }
 
 cityinput.addEventListener("keyup", (e) => {
-    if (e.code === "Enter" || e.code === "Done") {
+    if (e) {
+        humidity.innerHTML = e.code;
         const city = cityinput.value;
         removeError();
         showWeatherData(city);
