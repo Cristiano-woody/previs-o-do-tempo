@@ -31,7 +31,7 @@
 #searchContainer {
     width: 100%;
     height: 170px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     font-size: 17px;
-    color: #ffffffb7;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #inputShearch:focus {
@@ -99,12 +99,11 @@
 }
 
 #inputShearch::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #button {
-    width: 14%;
-    height: 100%;
+    padding: 1.4rem;
 
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
@@ -124,6 +123,7 @@
 #divError {
     width: 88%;
     margin-top: 10px;
+    margin-left: 30px;
     display: none;
     color: rgba(255, 255, 255, 0.76);
 
@@ -133,7 +133,7 @@
 }
 
 #containerWeater {
-    width: 85%;
+    width: 80%;
 
     display: flex;
     align-items: center;
@@ -159,7 +159,7 @@
 }
 
 #iconlocalization {
-    width: 20px;
+    width: 18px;
     height: 25px;
 }
 
@@ -296,4 +296,28 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media (max-width: 400px){
+    #searchContainer{
+        margin-bottom: 20px;
+    }
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+    #inputShearch{
+        width: 65%;
+        padding: 0.6rem;
+    }
+    #button{
+        padding: 1.2rem;
+    }
+    #iconlocalization{
+        width: 18px;
+        height: 2px;
+    }
+    #containerWeater{
+        gap: 20px;
+    }
 }
