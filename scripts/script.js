@@ -71,8 +71,7 @@ const HandleSubmit = (e) => {
 }
 
 cityinput.addEventListener("keyup", (e) => {
-    if (e) {
-        wind.innerHTML = e.key;
+    if (e.key === 'Enter') {
         const city = cityinput.value;
         removeError();
         showWeatherData(city);
